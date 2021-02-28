@@ -1,3 +1,18 @@
-site_name: My Docs
+site_name: IntroDB-Spring-2021
 theme:
   name: material
+  palette:
+    primary: black
+    accent: cyan
+
+markdown_extensions:
+  - admonition
+
+
+nav:
+  - HomePage: index.md
+  - Assignment:
+      - Assignment-1: Assignment/assignment1.md
+  - Project:
+      - Project-1: Project/project-1.md
+      - Project-2: Project/project-2.md
