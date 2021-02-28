@@ -1,8 +1,8 @@
 # COURSE INFORMATION
 
-**COMP130010h.01: Introduction of Database**
+> **COMP130010h.01: Introduction of Database**
 
-###### College of Computer Science and Technology, Fudan University
+> College of Computer Science and Technology, Fudan University
 
 - **Meeting Time:** **Tuesday 11-13 / Friday 8-9**
 - **Lecture Location:** **HGX 201 / H Computing Centre 302**
@@ -90,17 +90,21 @@ In this course, students will be required to complete **two course projects**.
 
 ## TAs
 
-**Jie Shi**
-
-> Software Engineering, College of Computer Science and Technology
->
-> 20212020016@fudan.edu.cn
-
 **Xuanjie Fang**
 
 > Software Engineering, College of Computer Science and Technology
 >
-> 20212020015@fudan.edu.cn
+> **Email:** 20212010015@fudan.edu.cn
+>
+> **location:**  J-Cross-science-2  E4006-02
+
+**Jie Shi**
+
+> Software Engineering, College of Computer Science and Technology
+>
+> **Email:** 20212010016@fudan.edu.cn
+>
+> **location:**  J-Cross-science-2  E4006-03
 
 
 
