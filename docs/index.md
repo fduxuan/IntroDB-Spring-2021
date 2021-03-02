@@ -5,7 +5,7 @@
 > College of Computer Science and Technology, Fudan University
 
 - **Meeting Time:** **Tuesday 11-13 / Friday 8-9**
-- **Lecture Location:** **HGX 201 / H Computing Centre 302**
+- **Lecture Location:** **HGX 201 / H Computing Centre 3# Room 3**
 - **Final: Wed/2021-06-30 13:00-15:00**
 
 
@@ -80,7 +80,7 @@ In this course, students will be required to complete **two course projects**.
 
 ## Textbook
 
-<img src="assets/textbook.png" alt="d" style="zoom:25%;" />
+<img src="assets/textbook.png" alt="d" style="zoom:25%;"/>
 
 **数据库系统教程(第3版)施伯乐，丁宝康，汪卫 著 高等教育出版社 本科研究生教材 高等教育出版社**
 
@@ -117,4 +117,22 @@ In this course, students will be required to complete **two course projects**.
 **Final: Wed/2021-06-30 13:00-15:00**
 
 **Closed book**
+
+
+
+----
+
+
+
+## Grading
+
+Grades will be weighted as follows:
+
+| Items                | Weight |
+| -------------------- | ------ |
+| Midterm Exams        | 25%    |
+| Final Exams          | 40%    |
+| Assignments/Projects | 35%    |
+
+If you have questions about the grading schema, please email us for contaction.
 
