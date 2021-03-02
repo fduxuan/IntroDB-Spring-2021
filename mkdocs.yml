@@ -7,6 +7,11 @@ theme:
 
 markdown_extensions:
   - admonition
+  - pymdownx.tabbed
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
 
 
 nav:
