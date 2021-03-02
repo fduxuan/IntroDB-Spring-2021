@@ -1,6 +1,6 @@
 # COURSE INFORMATION
 
-> **COMP130010h.01: Introduction of Database**
+> **COMP130010h.01: Introduction to Database**
 
 > College of Computer Science and Technology, Fudan University
 
