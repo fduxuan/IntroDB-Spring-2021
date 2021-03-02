@@ -5,7 +5,7 @@
 > College of Computer Science and Technology, Fudan University
 
 - **Meeting Time:** **Tuesday 11-13 / Friday 8-9**
-- **Lecture Location:** **HGX 201 / H Computing Centre 3# Room 3**
+- **Lecture Location:** **HGX 201 / H Computing Centre 3# {~~Room 2~~} {++Room 3++}** 
 - **Final: Wed/2021-06-30 13:00-15:00**
 
 
@@ -34,7 +34,7 @@ Topics include:
 
 ## Homeworks
 
-There will be roughly weekly homework. These will generally consist of a number of written problems. *Since there are also laboratory classes, theres homework will not involve any programming.*
+There will be roughly weekly homework. These will generally consist of a number of written problems. ***Since there are also laboratory classes, theres homework will not involve any programming.***
 
 
 
@@ -53,13 +53,11 @@ Written solutions will not be posted, but the homework problems may be reviewed 
 
 ## Assignments
 
-In the first few weeks, there are several simple assignments to help students understand the practicalities of database operation.
+In the first few weeks, there are several simple assignments to help students understand the practicalities of database operation, which are very easy since we will provide detailed instructions.
+
+We will post each assignment here in **<u>Friday's class</u>**, and students are required to complete the work and have it checked by TAs **{++in class++}**.
 
 * [Assignment-1](Assignment/assignment1.md)
-
-We will post each assignment here in **<u>Friday's class</u>**, and students are required to complete the work and have it checked by TAs in class.
-
-
 
 ----
 
@@ -83,6 +81,14 @@ In this course, students will be required to complete **two course projects**.
 <img src="assets/textbook.png" alt="d" style="zoom:25%;"/>
 
 **数据库系统教程(第3版)施伯乐，丁宝康，汪卫 著 高等教育出版社 本科研究生教材 高等教育出版社**
+
+
+
+<img src="assets/textbook2.png" alt="d" style="zoom:25%;"/>
+
+**Database Management Systems, 3rd Edition.  By Raghu Ramakrishnan, Jhannes Gehrke** 
+
+
 
 ----
 
