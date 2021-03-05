@@ -93,7 +93,7 @@ After all the above steps are completed, you are required to do following
 === "use command"
     ```CREATE SCHEMA `intro_db` ;```
 
-=== "user client tool"
+=== "use client tool"
     <img src="../../assets/tool.png" style="zoom:50%;" />
 	
 
@@ -107,7 +107,7 @@ After all the above steps are completed, you are required to do following
     PRIMARY KEY (`id`));
     ```
 
-=== "user client tool"
+=== "use client tool"
     <img src="../../assets/tool-table.png" style="zoom:50%;" />
 
 
@@ -118,6 +118,6 @@ After all the above steps are completed, you are required to do following
     ```
 	Insert into `intro_db`.`course` (id, name) values (2, 'amy');
     ```
-=== "user client tool"
+=== "use client tool"
     <img src="../../assets/insert.png" style="zoom:50%;" />
 

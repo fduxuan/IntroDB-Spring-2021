@@ -34,7 +34,7 @@ Topics include:
 
 ## Homeworks
 
-There will be roughly weekly homework. These will generally consist of a number of written problems. ***Since there are also laboratory classes, theres homework will not involve any programming.***
+There will be roughly weekly homework. These will generally consist of a number of written problems. ***Since there are also laboratory classes, these homework will not involve any programming.***
 
 
 
