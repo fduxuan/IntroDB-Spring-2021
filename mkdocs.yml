@@ -16,6 +16,9 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.highlight
+  - pymdownx.superfences
+
 
 
 nav:

@@ -54,10 +54,10 @@ Then click the <u>No thanks, just start my download.</u>
 
 If you have installed and configured the environment path, you can try the following commands to determine whether the installation is successful
 
-```shell
+```commandline
 $ mysql -u root -p
 
-mysql> show databases;
+$ mysql> show databases;
 ```
 
 <img src="../../assets/test_server.png" style="zoom:40%;" />
@@ -91,7 +91,9 @@ After all the above steps are completed, you are required to do following
 * **create a new schema**
 
 === "use command"
-    ```CREATE SCHEMA `intro_db` ;```
+    ```sql
+    CREATE SCHEMA `intro_db` ;
+    ```
 
 === "use client tool"
     <img src="../../assets/tool.png" style="zoom:50%;" />
@@ -100,7 +102,7 @@ After all the above steps are completed, you are required to do following
 * **Create a new table**
 
 === "use command"
-    ```
+    ```sql
     CREATE TABLE `intro_db`.`course` (
         `id` INT NOT NULL,
         `name` VARCHAR(45) NOT NULL, 
@@ -115,7 +117,7 @@ After all the above steps are completed, you are required to do following
 * **Insert a new data**
 
 === "use command"
-    ```
+    ```sql
 	Insert into `intro_db`.`course` (id, name) values (2, 'amy');
     ```
 === "use client tool"
