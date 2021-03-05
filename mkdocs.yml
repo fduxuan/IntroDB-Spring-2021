@@ -1,6 +1,7 @@
 site_name: IntroDB-Spring-2021
 site_url: https://fduxuan.github.io/IntroDB-Spring-2021/
 repo_url: https://github.com/fduxuan/IntroDB-Spring-2021
+repo_name: fduxuan/IntroDB-Spring-2021
 theme:
   name: material
   icon:
