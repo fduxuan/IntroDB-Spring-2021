@@ -1,0 +1,16 @@
+.md-typeset table:not([class]) th {
+    background-color: #003ebf1a;
+    color: #00000099;
+    font-weight: bold;
+    font-size: 110%
+}
+
+.md-typeset table:not([class]) td {
+    background-color: #5b8bf108;
+    color: #04233e;
+        font-size: 110%
+
+}
+.md-typeset__table{
+
+}
