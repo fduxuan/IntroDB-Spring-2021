@@ -59,6 +59,8 @@ We will post each assignment here in **<u>Friday's class</u>**, and students are
 
 * [Assignment-1](Assignment/assignment1.md)
 
+* [Assignment-2](Assignment/assignment2.md)
+
 ----
 
 

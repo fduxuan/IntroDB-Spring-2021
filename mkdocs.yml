@@ -28,6 +28,7 @@ nav:
   - HomePage: index.md
   - Assignment:
       - Assignment-1: Assignment/assignment1.md
+      - Assignment-2: Assignment/assignment2.md
   - Project:
       - Project-1: Project/project-1.md
       - Project-2: Project/project-2.md
