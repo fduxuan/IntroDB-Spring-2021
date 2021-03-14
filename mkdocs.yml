@@ -35,3 +35,5 @@ nav:
   - Project:
       - Project-1: Project/project-1.md
       - Project-2: Project/project-2.md
+  - Answer:
+      - Assignment-2 Answer: Answer/assignment-2.md
