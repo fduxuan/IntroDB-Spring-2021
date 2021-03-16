@@ -172,6 +172,19 @@ select m.`title`, p.`name`
 >
 > **输出: 演员名，参演的电影名，**
 
+```sql
+use movies;
+select m.title, p.name from movie m, person p, movie_actor ma1 
+	where m.id=ma1.movie_id and p.id=ma1.actor_id and m.year <= 2014 and ma1.actor_id in
+		(select mg.actor_id from movie_actor mg, movie mm 
+			where mm.id = mg.movie_id and mm.year<=2014
+            group by actor_id having count(*)>3);
+```
+
+**count=848**
+
+注意点：这道题很有可能会在聚合的地方不增加2014年限制，从而导致答案超过1000
+
 ---
 
 
@@ -182,6 +195,35 @@ select m.`title`, p.`name`
 >
 > **输出：演员姓名**
 
+```sql
+select p.`name` from `person` as p
+	where
+		p.`id` in
+			(select `actor_id` from `movie_actor`)
+		and not exists
+        (
+			select *
+				from
+					`person` as pp,
+                    `movie` as mm
+				where
+					pp.`name` = 'Joss Whedon'
+					and mm.`director` = pp.`id`
+                    and not exists
+                    (
+						select *
+                        from
+							`movie_actor` as ma
+						where
+							mm.`id` = ma.`movie_id`
+							and
+                            ma.`actor_id` = p.`id`
+                    )
+        );
+```
+
+**count=2**
+
 ---
 
 
@@ -191,6 +233,43 @@ select m.`title`, p.`name`
 > **查询这样的演员与导演，这个演员参演了该导演执导的所有电影，且该导演导演了至少2部电影。**
 >
 > **输出： 演员姓名，导演姓名**
+
+```sql
+select p.`name`, d.`name`
+	from `person` as p, `person` as d
+	where
+		p.`id` in
+			(select `actor_id` from `movie_actor`)
+		and
+        d.`id` in
+		(
+			select X.`director`
+			from `movie` as X, `movie` as Y
+			where
+				X.`director` = Y.`director`
+				and X.`id` != Y.`id`
+		)
+		and not exists
+        (
+			select *
+				from
+                    `movie` as m
+				where
+					m.`director` = d.`id`
+                    and not exists
+                    (
+						select *
+                        from
+							`movie_actor` as ma
+						where
+							m.`id` = ma.`movie_id`
+							and
+                            ma.`actor_id` = p.`id`
+                    )
+        );
+```
+
+**count=50**
 
 ---
 
@@ -203,3 +282,85 @@ select m.`title`, p.`name`
 > **查询每一种类型电影对应的影帝/影后（对于每一种类型，该影帝/影后至少有三部电影是这个类型，并且在所有至少参演了3部该类型电影的演员中，获得的平均评分最高）**
 >
 > **输出： 类型，演员名，平均评分**
+
+这道题最简单的思路是： 
+
+* 先把所有的表连接起来（因为所需的字段分散在不同的表中）
+* 对 （演员，类型）这两个字段做**聚合分组**，并按照这个分组求出 每个演员在每个类型上的所有电影的平均分，并在聚合中增加`count` 筛选出该类型对于该演员电影数必须>=3
+* 然后对类型分组，求出最大的平均分
+
+> Ps: 当涉及到嵌套子句比较长的时候，可以用 `with` 来优化(定义子句别名)
+
+```sql
+with whole as (
+	select g.name as genre, p.name as actor, avg(m.rating) as avg_rating
+	from genre g, movie m, movie_actor ma, movie_genre mg, person p
+	where g.id = mg.genre_id and m.id=mg.movie_id and p.id=ma.actor_id and m.id=ma.movie_id 
+  group by genre, actor having count(rating) >= 3
+)
+```
+
+这个 `whole`内部子句实现的就是步骤的前两步，得到了（演员，类型）对应的平均得分
+
+<img src="../10.png" style="zoom:50%;" />
+
+```sql
+use movies;	
+with whole as (
+	select g.name as genre, p.name as actor, avg(m.rating) as avg_rating
+	from genre g, movie m, movie_actor ma, movie_genre mg, person p
+	where g.id = mg.genre_id and m.id=mg.movie_id and p.id=ma.actor_id and m.id=ma.movie_id 
+  group by genre, actor having count(rating) >= 3
+)
+select w.genre as genre, max(w.avg_rating) as max_rating from whole w group by genre
+```
+
+到了这一步就求出了上一步中，每个类型对应的最大平均分
+
+<img src="../10-2.png" style="zoom:50%;" />
+
+
+
+最后求出最大的条目
+
+```sql
+use movies;	
+with whole as (
+	select g.name as genre, p.name as actor, avg(m.rating) as avg_rating
+	from genre g, movie m, movie_actor ma, movie_genre mg, person p
+	where g.id = mg.genre_id and m.id=mg.movie_id and p.id=ma.actor_id and m.id=ma.movie_id 
+  group by genre, actor having count(rating) >= 3
+), 
+max_genre as (
+  select w.genre as genre, max(w.avg_rating) as max_rating from whole w group by genre
+)
+select ww.actor as actor, ww.genre as genre, ww.avg_rating as rating from whole ww, max_genre as mg 
+	where ww.genre = mg.genre and ww.avg_rating >= mg.max_rating;
+```
+
+<img src="../10-3.png" style="zoom:50%;" />
+
+注意，一个类型的影帝/影后可能不止一个（平均分相同）
+
+**count=17**
+
+
+
+-----
+!!! hint "lujiayi同学的另一种写法更简洁和易于理解"
+```sql
+select g.name as genre,p.name,avg(mm.rating) as average_rating
+from movie_actor ma,movie mm,movie_genre mg,person p,genre g
+where mg.movie_id=mm.id and ma.movie_id=mm.id and g.id=mg.genre_id and p.id=ma.actor_id
+group by mg.genre_id,ma.actor_id having count(*)>=3 and avg(mm.rating)>=all(
+	select avg(m.rating)
+    from movie m,movie_genre mog,movie_actor moa
+    where mog.genre_id=mg.genre_id and mog.movie_id=m.id and moa.movie_id=m.id
+    group by moa.actor_id having count(*)>=3
+)
+```
+
+
+
+最后：有兴趣的同学可以运行这两种答案，比较一下速度差异，以及思考一下为什么会有这样的速度差异。
+
