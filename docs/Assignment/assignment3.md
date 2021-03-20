@@ -66,7 +66,7 @@ The steps for downloading and importing are the same as for [Assignment-2](assig
   | id     | Varchar | C1      |
   | tid    | Varchar | t10     |
 
-* **sc** => studnet--course
+* **sc** => student--course
 
   | Column | Type    | Example |
   | ------ | ------- | ------- |
@@ -101,7 +101,7 @@ The steps for downloading and importing are the same as for [Assignment-2](assig
   | Column | Type    | Example |
   | ------ | ------- | ------- |
   | cId    | Varchar | C10     |
-  | sid    | Varchar | E10     |
+  | eid    | Varchar | S10     |
   | Salary | Double  | 886     |
 
 
