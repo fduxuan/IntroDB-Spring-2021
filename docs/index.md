@@ -6,6 +6,7 @@
 
 - **Meeting Time:** **Tuesday 11-13 / Friday 8-9**
 - **Lecture Location:** **HGX 201 / H Computing Centre 3# {~~Room 2~~} {++Room 3++}** 
+- **Midterm: Tuesday/2021-04-27 6:30-8:30**
 - **Final: Wed/2021-06-30 13:00-15:00**
 
 

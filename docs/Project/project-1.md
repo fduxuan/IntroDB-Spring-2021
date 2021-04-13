@@ -16,7 +16,7 @@ This project is an opportunity to:
 
 **Release Date:** March 26, 2021 / 15:25
 
-**Due Date:** April 23, 2021 / 17:10
+**Due Date:** **{--April 23, 2021 / 17:10--} {++April 30, 2021 / 17:10++}**
 
 ---
 
