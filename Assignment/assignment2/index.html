@@ -1,0 +1,1003 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://fduxuan.github.io/IntroDB-Spring-2021/Assignment/assignment2/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+    
+    
+      
+        <title>Assignment-2 - IntroDB-Spring-2021</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="light-blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#assignment-2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IntroDB-Spring-2021" class="md-header__button md-logo" aria-label="IntroDB-Spring-2021" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IntroDB-Spring-2021
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Assignment-2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/fduxuan/IntroDB-Spring-2021/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fduxuan/IntroDB-Spring-2021
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IntroDB-Spring-2021" class="md-nav__button md-logo" aria-label="IntroDB-Spring-2021" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    IntroDB-Spring-2021
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/fduxuan/IntroDB-Spring-2021/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fduxuan/IntroDB-Spring-2021
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        HomePage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Assignment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assignment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Assignment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assignment1/" class="md-nav__link">
+        Assignment-1
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Assignment-2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Assignment-2
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preliminary" class="md-nav__link">
+    Preliminary
+  </a>
+  
+    <nav class="md-nav" aria-label="Preliminary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    Download
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-data" class="md-nav__link">
+    Loading data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-tutorials" class="md-nav__link">
+    Simple tutorials
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple tutorials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-structure" class="md-nav__link">
+    Table Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    Tasks
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assignment3/" class="md-nav__link">
+        Assignment-3
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Project
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Project" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Project/project-1/" class="md-nav__link">
+        Project-1
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Project/project-1%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        Project-1 补充说明
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Project/project-2/" class="md-nav__link">
+        Project-2
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Answer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Answer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Answer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Answer/assignment-2/" class="md-nav__link">
+        Assignment-2 Answer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Answer/assignment-3/" class="md-nav__link">
+        Assignment-3 Answer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perplexity.md" class="md-nav__link">
+        Perplexity
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preliminary" class="md-nav__link">
+    Preliminary
+  </a>
+  
+    <nav class="md-nav" aria-label="Preliminary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    Download
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-data" class="md-nav__link">
+    Loading data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-tutorials" class="md-nav__link">
+    Simple tutorials
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple tutorials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-structure" class="md-nav__link">
+    Table Structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasks" class="md-nav__link">
+    Tasks
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fduxuan/IntroDB-Spring-2021/edit/master/docs/Assignment/assignment2.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="assignment-2">Assignment 2</h1>
+<h2 id="overview">Overview</h2>
+<p>The second homework is to construct a set of SQL queries for data analysis. For this, we will provide some natural language level query questions that students will need to convert into sql statements.</p>
+<p>Students will also be required to run these sql queries and have them checked by the TAs  <strong><ins class="critic">in class</ins></strong>.</p>
+<p>This task is an opportunity to:</p>
+<ul>
+<li>Learn basic and certain advanced SQL features</li>
+<li>Get familiar with using and applying sql in specific application scenarios</li>
+</ul>
+<p><strong>Release Date:</strong> March 12, 2021 / 15:25</p>
+<p><strong>Due Date:</strong> March 12, 2021 / 17:10</p>
+<hr />
+<h2 id="preliminary">Preliminary</h2>
+<h4 id="download">Download</h4>
+<p>You need to download the <strong>DataSet</strong> we have prepared for you in the <code>elearning</code>.</p>
+<ul>
+<li><code>movies.sql</code></li>
+</ul>
+<p><img alt="" src="../assignment2-assets/download.png" /></p>
+<hr />
+<h4 id="loading-data">Loading data</h4>
+<p>Open <code>Mysql Workbench</code> , click the corresponding tab to import <code>movies.sql</code> downloaded in the previous step.<img alt="" src="../assignment2-assets/loading-tab.png" /></p>
+<p>Then click the <code>run</code> button (It looks like ⚡️), you'll see a series of success logs below.</p>
+<p><img src="../assignment2-assets/run.png" alt="d" style="zoom:30%;" /></p>
+<p>Finally, click the refresh button in the sidebar.</p>
+<p>A schema called <strong>movies</strong> has been loaded sucessfully.</p>
+<p><img src="../assignment2-assets/sidebar.png" alt="j" style="zoom:40%;" /></p>
+<h2 id="simple-tutorials">Simple tutorials</h2>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><strong>Before writing SQL statements, please carefully observe the column name and structure of each table. A clearer understanding of the overall architecture will help you quickly and accurately finish this work.</strong></p>
+</div>
+<h3 id="table-structure">Table Structure</h3>
+<ul>
+<li><strong>Genre</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td>Int</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Varchar</td>
+<td>"Action"</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>movie</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td>Int</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>Varchar</td>
+<td>"(500) Days of Summer"</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Varchar</td>
+<td>"Desc"</td>
+</tr>
+<tr>
+<td>Director</td>
+<td>Int  (person's id)</td>
+<td>123</td>
+</tr>
+<tr>
+<td>Year</td>
+<td>Int</td>
+<td>2014</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>Int</td>
+<td>95</td>
+</tr>
+<tr>
+<td>Rating</td>
+<td>Double</td>
+<td>8.0</td>
+</tr>
+<tr>
+<td>Votes</td>
+<td>Int</td>
+<td>9830</td>
+</tr>
+<tr>
+<td>Revenue</td>
+<td>Double</td>
+<td>98982.3</td>
+</tr>
+<tr>
+<td>Metascore</td>
+<td>Int</td>
+<td>76</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>movie_actor</strong></li>
+</ul>
+<p><strong><ins class="critic">A movie can correspond to multiple actors</ins></strong></p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td>Int</td>
+<td>1</td>
+</tr>
+<tr>
+<td>movie_id</td>
+<td>Int</td>
+<td>1</td>
+</tr>
+<tr>
+<td>actor_id</td>
+<td>Int</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>movie_genre</strong></li>
+</ul>
+<p><strong><ins class="critic">A movie can correspond to multiple genres</ins></strong></p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td>Int</td>
+<td>1</td>
+</tr>
+<tr>
+<td>movie_id</td>
+<td>Int</td>
+<td>1</td>
+</tr>
+<tr>
+<td>genre_id</td>
+<td>Int</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>person</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Id</td>
+<td>Int</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>Varchar</td>
+<td>"amy"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="examples">Examples</h3>
+<blockquote>
+<p><strong>E1 查询 <code>Edward Norton</code> 参演的所有电影的标题</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">movies</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">m</span><span class="p">.</span><span class="n">title</span> <span class="k">from</span>  <span class="n">movie</span> <span class="n">m</span><span class="p">,</span> <span class="n">movie_actor</span> <span class="n">ma</span><span class="p">,</span> <span class="n">person</span> <span class="n">p</span>
+    <span class="k">where</span> <span class="n">m</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">ma</span><span class="p">.</span><span class="n">movie_id</span> <span class="k">and</span> <span class="n">p</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">ma</span><span class="p">.</span><span class="n">actor_id</span> <span class="k">and</span> <span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Edward Norton&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p><img alt="" src="../assignment2-assets/demo.png" /></p>
+<hr />
+<blockquote>
+<p><strong>E2: 查询执导电影超过3部的导演名称</strong></p>
+<p><strong>输出: 导演名，电影名称</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">movies</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="n">m</span><span class="p">.</span><span class="n">title</span> <span class="k">from</span> <span class="n">movie</span> <span class="n">m</span><span class="p">,</span> <span class="n">person</span> <span class="n">p</span>
+        <span class="k">where</span> <span class="n">m</span><span class="p">.</span><span class="n">director</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">id</span> <span class="k">and</span> <span class="n">m</span><span class="p">.</span><span class="n">director</span> <span class="k">in</span> 
+            <span class="p">(</span><span class="k">select</span> <span class="n">director</span> <span class="k">from</span> <span class="n">movie</span> <span class="k">group</span> <span class="k">by</span> <span class="n">director</span> <span class="k">having</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<blockquote>
+<p><strong>E3: 查询前十位票房担当演员，即该演员参演的所有电影的累积票房最高</strong></p>
+<p><strong>输出：演员名称，累积票房</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">movies</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">mm</span><span class="p">.</span><span class="n">name</span><span class="p">,</span> <span class="k">sum</span><span class="p">(</span><span class="n">mm</span><span class="p">.</span><span class="n">revenue</span><span class="p">)</span> <span class="k">as</span> <span class="n">sum_revenue</span> <span class="k">from</span> 
+    <span class="p">(</span><span class="k">select</span> <span class="n">p</span><span class="p">.</span><span class="n">name</span> <span class="k">as</span> <span class="n">name</span><span class="p">,</span> <span class="n">m</span><span class="p">.</span><span class="n">revenue</span> <span class="k">as</span> <span class="n">revenue</span>  
+        <span class="k">from</span> <span class="n">person</span> <span class="n">p</span><span class="p">,</span> <span class="n">movie</span> <span class="n">m</span><span class="p">,</span> <span class="n">movie_actor</span> <span class="n">ma</span>
+        <span class="k">where</span> <span class="n">p</span><span class="p">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">ma</span><span class="p">.</span><span class="n">actor_id</span> <span class="k">and</span> <span class="n">ma</span><span class="p">.</span><span class="n">movie_id</span><span class="o">=</span><span class="n">m</span><span class="p">.</span><span class="n">id</span> <span class="p">)</span> <span class="k">as</span> <span class="n">mm</span> 
+    <span class="k">group</span> <span class="k">by</span> <span class="n">mm</span><span class="p">.</span><span class="n">name</span> <span class="k">order</span> <span class="k">by</span> <span class="n">sum_revenue</span> <span class="k">desc</span> <span class="k">limit</span> <span class="mi">10</span><span class="p">;</span>
+</code></pre></div>
+<hr />
+<h2 id="tasks">Tasks</h2>
+<p><strong>Q1</strong></p>
+<blockquote>
+<p><strong>查询上映时间 &gt;= 2014年并且评分&lt;=7.0的电影，</strong></p>
+<p><strong>输出:电影标题，导演姓名，评分(<code>rating</code>)</strong></p>
+</blockquote>
+<hr />
+<p><strong>Q2</strong></p>
+<blockquote>
+<p><strong>查询这样的导演姓名（在<code>movie</code>.<code>director</code>中有记录的即导演），这些导演没有在任何一部电影中担任演员。</strong></p>
+<p><strong>输出：导演姓名</strong></p>
+</blockquote>
+<hr />
+<p><strong>Q3</strong></p>
+<blockquote>
+<p><strong>查询 <code>Edward Norton</code> 或者 <code>Aamir Khan</code> 参演过的所有电影</strong></p>
+<p><strong>输出: 电影标题,该电影的上映时间</strong></p>
+</blockquote>
+<hr />
+<p><strong>Q4</strong></p>
+<blockquote>
+<p><strong>查询类型为 <code>Action</code>且 评分&gt;8.0 的电影，并且该电影的导演执导的所有电影&gt;=2部</strong></p>
+<p><strong>输出:电影标题,导演姓名,评分</strong></p>
+</blockquote>
+<hr />
+<p><strong>Q5</strong></p>
+<blockquote>
+<p><strong>查询电影，该电影至少包含<code>Horror</code>，<code>Thriller</code>这2种类型</strong></p>
+<p><strong>输出：电影名称，导演名称</strong></p>
+</blockquote>
+<hr />
+<p><strong>Q6</strong></p>
+<blockquote>
+<p><strong>查询电影，该电影仅仅包含<code>Horror</code>，<code>Thriller</code>这2种类型</strong></p>
+<p><strong>输出：电影名称，导演名称</strong></p>
+</blockquote>
+<hr />
+<p><strong>Q7</strong></p>
+<blockquote>
+<p><strong>查询在2014年之前（包括2014），有超过3部电影上映的演员以及他参演的电影名</strong></p>
+<p><strong>输出: 演员名，参演的电影名，</strong></p>
+</blockquote>
+<hr />
+<p><strong>Q8</strong></p>
+<blockquote>
+<p><strong>查询演员，该演员参演了<code>Joss Whedon</code>导演执导的所有电影。</strong></p>
+<p><strong>输出：演员姓名</strong></p>
+</blockquote>
+<hr />
+<p><strong>Q9</strong></p>
+<blockquote>
+<p><strong>查询这样的演员与导演，这个演员参演了该导演执导的所有电影，且该导演导演了至少2部电影。</strong></p>
+<p><strong>输出： 演员姓名，导演姓名</strong></p>
+</blockquote>
+<hr />
+<p><strong>Q10</strong>*</p>
+<div class="admonition warning">
+<p class="admonition-title">Additional Question</p>
+</div>
+<blockquote>
+<p><strong>查询每一种类型电影对应的影帝/影后（对于每一种类型，该影帝/影后至少有三部电影是这个类型，并且在所有至少参演了3部该类型电影的演员中，获得的平均评分最高）</strong></p>
+<p><strong>输出： 类型，演员名，平均评分</strong></p>
+</blockquote>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../assignment1/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Assignment-1
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../assignment3/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Assignment-3
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>

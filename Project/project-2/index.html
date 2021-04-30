@@ -1,0 +1,925 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://fduxuan.github.io/IntroDB-Spring-2021/Project/project-2/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+    
+    
+      
+        <title>Project-2 - IntroDB-Spring-2021</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="light-blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#project-2-myjql" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IntroDB-Spring-2021" class="md-header__button md-logo" aria-label="IntroDB-Spring-2021" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IntroDB-Spring-2021
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Project-2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/fduxuan/IntroDB-Spring-2021/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fduxuan/IntroDB-Spring-2021
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IntroDB-Spring-2021" class="md-nav__button md-logo" aria-label="IntroDB-Spring-2021" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    IntroDB-Spring-2021
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/fduxuan/IntroDB-Spring-2021/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fduxuan/IntroDB-Spring-2021
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        HomePage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Assignment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assignment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Assignment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Assignment/assignment1/" class="md-nav__link">
+        Assignment-1
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Assignment/assignment2/" class="md-nav__link">
+        Assignment-2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Assignment/assignment3/" class="md-nav__link">
+        Assignment-3
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Project
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Project" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-1/" class="md-nav__link">
+        Project-1
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-1%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        Project-1 补充说明
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Project-2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Project-2
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-myjql" class="md-nav__link">
+    Introduction to MyJQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jql-syntax-shell-io-format" class="md-nav__link">
+    JQL Syntax &amp; Shell IO Format
+  </a>
+  
+    <nav class="md-nav" aria-label="JQL Syntax &amp; Shell IO Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-order" class="md-nav__link">
+    Listing Order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format-of-records" class="md-nav__link">
+    Format of Records
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-jqls" class="md-nav__link">
+    Supported JQLs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-usage" class="md-nav__link">
+    Sample Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grading-method" class="md-nav__link">
+    Grading Method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-method" class="md-nav__link">
+    Testing Method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submission" class="md-nav__link">
+    Submission
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Answer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Answer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Answer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Answer/assignment-2/" class="md-nav__link">
+        Assignment-2 Answer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Answer/assignment-3/" class="md-nav__link">
+        Assignment-3 Answer
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perplexity.md" class="md-nav__link">
+        Perplexity
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-myjql" class="md-nav__link">
+    Introduction to MyJQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jql-syntax-shell-io-format" class="md-nav__link">
+    JQL Syntax &amp; Shell IO Format
+  </a>
+  
+    <nav class="md-nav" aria-label="JQL Syntax &amp; Shell IO Format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompt" class="md-nav__link">
+    Prompt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listing-order" class="md-nav__link">
+    Listing Order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format-of-records" class="md-nav__link">
+    Format of Records
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-jqls" class="md-nav__link">
+    Supported JQLs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-usage" class="md-nav__link">
+    Sample Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grading-method" class="md-nav__link">
+    Grading Method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-method" class="md-nav__link">
+    Testing Method
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submission" class="md-nav__link">
+    Submission
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fduxuan/IntroDB-Spring-2021/edit/master/docs/Project/project-2.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="project-2-myjql">Project-2: MyJQL</h1>
+<p>In this project, you are going to implement a toy database which supports B-Tree indexing in C. You can use any system calls available in Ubuntu but you cannot link to any external libraries.</p>
+<h2 id="introduction-to-myjql">Introduction to MyJQL</h2>
+<p>MyJQL is a simplified database which has only one table of two columns. Its only table is defined to be:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Column</th>
+<th align="center">Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>A</code></td>
+<td align="center"><code>int</code></td>
+</tr>
+<tr>
+<td align="center"><code>B</code></td>
+<td align="center"><code>varchar(11)</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><code>A</code> is an unsigned 31-bit integer, and <code>B</code> consists of the english alphabets and the numerical digits.</p>
+</blockquote>
+<p>B-Tree index is automatically created for column <code>B</code>.</p>
+<p>To run the database, you must specify the database file. If the database program is <code>myjql</code>, and the database file is <code>myjql.db</code> (which will be automatically created if it does not exist), you start the database by running <code>./myjql myjql.db</code>. In this way, if you exit the database and restart it later with the same database file, your data will persist (instead of losing after exiting).</p>
+<h2 id="jql-syntax-shell-io-format">JQL Syntax &amp; Shell IO Format</h2>
+<p><strong>You must strictly follow the IO format, or you will fail all the tests! You may assume all the input is valid so that you don't need to handle any error.</strong></p>
+<h3 id="prompt">Prompt</h3>
+<p>The database prints <code>"myjql&gt; "</code> (no trailing new-line character <code>'\n'</code>) to wait for the input.</p>
+<h3 id="listing-order">Listing Order</h3>
+<p>Since you are going to list the records, the listing order is crucial. Basically, the rules are:
+- The records are sorted by <code>B</code> in ascending order (determined by <code>strcmp</code>).
+- If there are multiple records with the same <code>B</code>, these records are sorted by their time of insertion in descending order (The latest record will be listed first).</p>
+<h3 id="format-of-records">Format of Records</h3>
+<p>The format for any record is: <code>(A, B)</code> followed by <code>'\n'</code> (<code>Space</code> <code>' '</code> is after the <code>','</code>, not <code>Tab</code> <code>'\t'</code> or any other). <code>A</code> and <code>B</code> are not enclosed in quotes <code>'</code> or <code>"</code>.</p>
+<p>When you are printing <em>a list of records</em>, it will be <code>"(Empty)\n"</code>, if there are no records; or, use the format above to print the record(s) in the order mentioned earlier.</p>
+<h3 id="supported-jqls">Supported JQLs</h3>
+<ul>
+<li><code>select</code>: List all the records.</li>
+<li>Output: <code>'\n'</code> followed by <em>a list of records</em>, and finally <code>"\nExecuted.\n\n"</code>.</li>
+<li><code>select s</code>: Find the record(s) whose <code>B = s</code>.</li>
+<li>Output: <code>'\n'</code> followed by <em>a list of records</em> satisfying the select criterion, and finally <code>"\nExecuted.\n\n"</code>.</li>
+<li><code>insert i s</code>: Insert a record with <code>A = i</code>, <code>B = s</code>.</li>
+<li>Output: <code>"\nExecuted.\n\n"</code>.</li>
+<li><code>delete s</code>: Delete the record(s) whose <code>B = s</code>.</li>
+<li>Output: <code>"\nExecuted.\n\n"</code>.</li>
+<li><code>.exit</code>: Exit the database. This will always be the last input.</li>
+<li>Output: <code>"bye~\n"</code> (no leading new-line character <code>'\n'</code>).</li>
+</ul>
+<blockquote>
+<p><code>i</code> and <code>s</code> are both valid and they are not enclosed in quotes <code>'</code> or <code>"</code>.</p>
+</blockquote>
+<h2 id="sample-usage">Sample Usage</h2>
+<p>Start your database (assuming <code>myjql.db</code> does not exist):
+<div class="highlight"><pre><span></span><code>./myjql myjql.db
+</code></pre></div></p>
+<p>The interactions between you and your database are listed as follows:
+<div class="highlight"><pre><span></span><code>myjql&gt; select
+
+(Empty)
+
+Executed.
+
+myjql&gt; insert 1 a
+
+Executed.
+
+myjql&gt; insert 2 b
+
+Executed.
+
+myjql&gt; insert 3 d
+
+Executed.
+
+myjql&gt; insert 4 c
+
+Executed.
+
+myjql&gt; select
+
+(1, a)
+(2, b)
+(4, c)
+(3, d)
+
+Executed.
+
+myjql&gt; insert 5 b
+
+Executed.
+
+myjql&gt; insert 6 b
+
+Executed.
+
+myjql&gt; select
+
+(1, a)
+(6, b)
+(5, b)
+(2, b)
+(4, c)
+(3, d)
+
+Executed.
+
+myjql&gt; select b
+
+(6, b)
+(5, b)
+(2, b)
+
+Executed.
+
+myjql&gt; delete b
+
+Executed.
+
+myjql&gt; select
+
+(1, a)
+(4, c)
+(3, d)
+
+Executed.
+
+myjql&gt; select b
+
+(Empty)
+
+Executed.
+
+myjql&gt; delete e
+
+Executed.
+
+myjql&gt; select
+
+(1, a)
+(4, c)
+(3, d)
+
+Executed.
+
+myjql&gt; .exit
+bye~
+</code></pre></div></p>
+<p>Now, restart your database (without deleting <code>myjql.db</code>):
+<div class="highlight"><pre><span></span><code>./myjql myjql.db
+</code></pre></div></p>
+<p>The interactions between you and your database are listed as follows:
+<div class="highlight"><pre><span></span><code>myjql&gt; select
+
+(1, a)
+(4, c)
+(3, d)
+
+Executed.
+
+myjql&gt; .exit
+bye~
+</code></pre></div></p>
+<h2 id="grading-method">Grading Method</h2>
+<p>Total: <strong>10</strong> points</p>
+<p>You will get the points one step after another in the following order:</p>
+<ul>
+<li>If you 1) implement a B-Tree structure which can be serialized into (and deserialized from) the disk file, and 2) pass both the preliminary test (which you can download <code>pj-2-pre-test.zip</code> from the files in elearning) and the manual test (for database basic functions and persistence check), you have <strong>5</strong> points.</li>
+<li>If you pass the final test (which will not be provided) within the time limit, you have <strong>3</strong> points.</li>
+<li>If you pass the final test within the memory limit, you have <strong>2</strong> points.</li>
+</ul>
+<blockquote>
+<p>Pass a test means that the output of your database should be completely identical to that of the standard database.</p>
+<p>Standard database refers to my implementation.</p>
+<p>Disk space is unlimited.</p>
+</blockquote>
+<h2 id="testing-method">Testing Method</h2>
+<ul>
+<li>Computer Hardware:</li>
+<li>CPU: Intel Xeon Silver 4114 @ 2.20GHz</li>
+<li>RAM: 128GB</li>
+<li>Operating System: Ubuntu 18.04.3 LTS</li>
+<li>GCC Version: 7.5.0</li>
+<li>Compiling: <code>gcc -o myjql myjql.c -O3</code></li>
+<li>Executing: <code>/usr/bin/time -v ./myjql myjql.db &lt; in.txt &gt; out.txt</code></li>
+<li>Comparing: <code>diff out.txt ans.txt</code></li>
+<li>There should be no differences.</li>
+</ul>
+<blockquote>
+<p>Important metrics for the standard database:
+<div class="highlight"><pre><span></span><code>Elapsed (wall clock) time (h:mm:ss or m:ss): 1:06.98
+Maximum resident set size (kbytes): 1768
+</code></pre></div>
+Your time limit and your memory limit are set to be <code>3:00.00</code>, and <code>6000</code>, respectively.</p>
+</blockquote>
+<h2 id="submission">Submission</h2>
+<p>What you have to submit: a zip archive named <code>[student_id]-[name]-pj-2.zip</code>. When unzip it with <code>unzip [student_id]-[name]-pj-2.zip</code>. We should have the following directory structure:</p>
+<div class="highlight"><pre><span></span><code>[student_id]-[name]-pj-2
+|- doc.pdf
+|- myjql.c
+</code></pre></div>
+<blockquote>
+<p>Your document should well explain the architecture of your database, and the algorithms for B-Tree operations if it is specially optimized.</p>
+</blockquote>
+<p>You should submit your zip archive to the corresponding assignment in elearning.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../project-1%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Project-1 补充说明
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../../Answer/assignment-2/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Assignment-2 Answer
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,825 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://fduxuan.github.io/IntroDB-Spring-2021/Answer/assignment-3/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
+    
+    
+      
+        <title>Assignment-3 Answer - IntroDB-Spring-2021</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="black" data-md-color-accent="light-blue">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#assignment-3-answer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IntroDB-Spring-2021" class="md-header__button md-logo" aria-label="IntroDB-Spring-2021" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IntroDB-Spring-2021
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Assignment-3 Answer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/fduxuan/IntroDB-Spring-2021/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fduxuan/IntroDB-Spring-2021
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IntroDB-Spring-2021" class="md-nav__button md-logo" aria-label="IntroDB-Spring-2021" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    IntroDB-Spring-2021
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/fduxuan/IntroDB-Spring-2021/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fduxuan/IntroDB-Spring-2021
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        HomePage
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Assignment
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Assignment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Assignment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Assignment/assignment1/" class="md-nav__link">
+        Assignment-1
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Assignment/assignment2/" class="md-nav__link">
+        Assignment-2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Assignment/assignment3/" class="md-nav__link">
+        Assignment-3
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Project
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Project" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Project/project-1/" class="md-nav__link">
+        Project-1
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Project/project-1%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        Project-1 补充说明
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Project/project-2/" class="md-nav__link">
+        Project-2
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Answer
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Answer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Answer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assignment-2/" class="md-nav__link">
+        Assignment-2 Answer
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Assignment-3 Answer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Assignment-3 Answer
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    3.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    3.13
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../perplexity.md" class="md-nav__link">
+        Perplexity
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    3.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    3.13
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/fduxuan/IntroDB-Spring-2021/edit/master/docs/Answer/assignment-3.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="assignment-3-answer">Assignment-3 Answer</h1>
+<h2 id="37">3.7</h2>
+<p><strong>Q1</strong></p>
+<blockquote>
+<p><strong>统计有学生选修的课程门数</strong></p>
+<p><strong>输出: count</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">school</span><span class="p">;</span>
+<span class="k">select</span> <span class="k">count</span><span class="p">(</span><span class="k">distinct</span> <span class="n">cid</span><span class="p">)</span> <span class="k">from</span> <span class="n">sc</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>count=201</strong></p>
+<hr />
+<p><strong>Q2</strong></p>
+<blockquote>
+<p><strong>选修C4课程的女学生的平均年龄</strong></p>
+<p><strong>输出: avg_age</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">school</span><span class="p">;</span>
+<span class="k">select</span> <span class="k">avg</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">age</span><span class="p">)</span> <span class="k">from</span> <span class="n">sc</span><span class="p">,</span> <span class="n">s</span> <span class="k">where</span> <span class="n">sc</span><span class="p">.</span><span class="n">sid</span><span class="o">=</span><span class="n">s</span><span class="p">.</span><span class="n">id</span> <span class="k">and</span> <span class="n">s</span><span class="p">.</span><span class="n">sex</span><span class="o">=</span><span class="s1">&#39;F&#39;</span> <span class="k">and</span> <span class="n">sc</span><span class="p">.</span><span class="n">cid</span><span class="o">=</span><span class="s1">&#39;C4&#39;</span>
+</code></pre></div>
+<p><strong>avg=19.8780</strong></p>
+<hr />
+<p><strong>Q3</strong></p>
+<blockquote>
+<p><strong><code>LIU</code>老师所授课程的每门课程的平均成绩</strong></p>
+<p><strong>课程ID，平均成绩</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">school</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">sc</span><span class="p">.</span><span class="n">cid</span><span class="p">,</span> <span class="k">avg</span><span class="p">(</span><span class="n">sc</span><span class="p">.</span><span class="n">score</span><span class="p">)</span>  <span class="k">from</span> <span class="n">sc</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="k">c</span> 
+    <span class="k">where</span> <span class="n">sc</span><span class="p">.</span><span class="n">cid</span> <span class="o">=</span> <span class="k">c</span><span class="p">.</span><span class="n">id</span> <span class="k">and</span> <span class="k">c</span><span class="p">.</span><span class="n">tid</span><span class="o">=</span><span class="n">t</span><span class="p">.</span><span class="n">id</span> <span class="k">and</span> <span class="n">t</span><span class="p">.</span><span class="n">tname</span><span class="o">=</span><span class="s1">&#39;LIU&#39;</span>
+    <span class="k">group</span> <span class="k">by</span> <span class="n">sc</span><span class="p">.</span><span class="n">cid</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>C200 , 80.994595</strong></p>
+<p><strong>C201 , 79.469474</strong></p>
+<hr />
+<p><strong>Q4</strong></p>
+<blockquote>
+<p><strong>每门课程的学生选修人数，并且只统计选课人数&gt;10的课程</strong></p>
+<p><strong>输出: 课程ID，人数</strong></p>
+<p><strong>排序：人数降序，相同则按课程号升序</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">school</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">sc</span><span class="p">.</span><span class="n">cid</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">as</span> <span class="n">num</span> <span class="k">from</span> <span class="n">sc</span> 
+    <span class="k">group</span> <span class="k">by</span> <span class="n">sc</span><span class="p">.</span><span class="n">cid</span> <span class="k">having</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">10</span>
+    <span class="k">order</span> <span class="k">by</span> <span class="n">num</span> <span class="k">desc</span><span class="p">,</span> <span class="n">sc</span><span class="p">.</span><span class="n">cid</span> <span class="k">ASC</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>C19, 96</strong></p>
+<hr />
+<p><strong>Q5</strong></p>
+<blockquote>
+<p><strong>学号比<code>WANG</code>同学大，年龄比他小的学生姓名</strong></p>
+<p><strong>输出: 学生姓名</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">school</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">x</span><span class="p">.</span><span class="n">sname</span> <span class="k">from</span> <span class="n">s</span> <span class="k">as</span> <span class="n">x</span><span class="p">,</span> <span class="n">s</span> <span class="k">as</span> <span class="n">y</span>
+    <span class="k">where</span> <span class="n">y</span><span class="p">.</span><span class="n">sname</span><span class="o">=</span><span class="s1">&#39;WANG&#39;</span> <span class="k">and</span> <span class="n">x</span><span class="p">.</span><span class="n">id</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">.</span><span class="n">id</span> <span class="k">and</span> <span class="n">x</span><span class="p">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">.</span><span class="n">age</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>count=4： CHA ZENG YOU JI</strong></p>
+<hr />
+<p><strong>Q6</strong></p>
+<blockquote>
+<p><strong>表SC中，查找成绩为空的学生</strong></p>
+<p><strong>输出: 学号，学生姓名</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">school</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">s</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">sname</span> <span class="k">from</span> <span class="n">s</span><span class="p">,</span> <span class="n">sc</span> <span class="k">where</span> <span class="n">score</span> <span class="k">is</span> <span class="k">null</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>count=0</strong></p>
+<hr />
+<p><strong>Q7</strong></p>
+<blockquote>
+<p><strong>姓名以 <code>L</code> 打头的所有学生</strong></p>
+<p><strong>输出: 姓名，年龄</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">school</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">sname</span><span class="p">,</span> <span class="n">age</span> <span class="k">from</span> <span class="n">s</span> <span class="k">where</span> <span class="n">sname</span> <span class="k">like</span> <span class="s1">&#39;L%&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>count=10</strong></p>
+<hr />
+<p><strong>Q8</strong></p>
+<blockquote>
+<p><strong>年龄大于女同学平均年龄的男生</strong></p>
+<p><strong>输出: 姓名， 年龄</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">school</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">x</span><span class="p">.</span><span class="n">sname</span><span class="p">,</span> <span class="n">x</span><span class="p">.</span><span class="n">age</span> <span class="k">from</span> <span class="n">s</span> <span class="k">as</span> <span class="n">x</span>
+    <span class="k">where</span> <span class="n">x</span><span class="p">.</span><span class="n">sex</span><span class="o">=</span><span class="s1">&#39;M&#39;</span> <span class="k">and</span> <span class="n">x</span><span class="p">.</span><span class="n">age</span> <span class="o">&gt;</span> 
+    <span class="p">(</span><span class="k">select</span> <span class="k">avg</span><span class="p">(</span><span class="n">y</span><span class="p">.</span><span class="n">age</span><span class="p">)</span> <span class="k">from</span> <span class="n">s</span> <span class="k">as</span> <span class="n">y</span>
+         <span class="k">where</span> <span class="n">y</span><span class="p">.</span><span class="n">sex</span><span class="o">=</span><span class="s1">&#39;F&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>count=53</strong></p>
+<hr />
+<p><strong>Q9</strong></p>
+<blockquote>
+<p><strong>年龄大于所有女同学年龄的男生</strong></p>
+<p><strong>输出: 姓名， 年龄</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">school</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">x</span><span class="p">.</span><span class="n">sname</span><span class="p">,</span> <span class="n">x</span><span class="p">.</span><span class="n">age</span> <span class="k">from</span> <span class="n">s</span> <span class="k">as</span> <span class="n">x</span>
+    <span class="k">where</span> <span class="n">x</span><span class="p">.</span><span class="n">sex</span><span class="o">=</span><span class="s1">&#39;M&#39;</span> <span class="k">and</span> <span class="n">x</span><span class="p">.</span><span class="n">age</span><span class="o">&gt;</span>
+    <span class="k">all</span><span class="p">(</span><span class="k">select</span> <span class="n">y</span><span class="p">.</span><span class="n">age</span> <span class="k">from</span> <span class="n">s</span> <span class="k">as</span> <span class="n">y</span> <span class="k">where</span> <span class="n">y</span><span class="p">.</span><span class="n">sex</span><span class="o">=</span><span class="s1">&#39;F&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>count=0</strong></p>
+<hr />
+<h2 id="313">3.13</h2>
+<p><strong>Q1</strong></p>
+<blockquote>
+<p><strong>用create table 创建三个表的副本，命名为<code>xx_copy</code>, <code>xx</code>为原表名</strong></p>
+<p><strong>需要指出主键和外键</strong></p>
+<p><strong>并且导入原表所有数据</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">employment</span><span class="p">;</span>
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">comp_copy</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">id</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">cname</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_0900_ai_ci</span><span class="p">;</span>
+
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">emp_copy</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">id</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">ename</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">age</span><span class="o">`</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">sex</span><span class="o">`</span> <span class="nb">char</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_0900_ai_ci</span><span class="p">;</span>
+
+<span class="k">CREATE</span> <span class="k">TABLE</span> <span class="o">`</span><span class="n">works_copy</span><span class="o">`</span> <span class="p">(</span>
+  <span class="o">`</span><span class="n">eid</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">cid</span><span class="o">`</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="o">`</span><span class="n">salary</span><span class="o">`</span> <span class="nb">int</span> <span class="k">DEFAULT</span> <span class="k">NULL</span><span class="p">,</span>
+  <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">eid</span><span class="o">`</span><span class="p">,</span><span class="o">`</span><span class="n">cid</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">KEY</span> <span class="o">`</span><span class="n">works_copy</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">cid</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="o">`</span><span class="n">works_ibfk_1_1</span><span class="o">`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">eid</span><span class="o">`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="o">`</span><span class="n">emp_copy</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">),</span>
+  <span class="k">CONSTRAINT</span> <span class="o">`</span><span class="n">works_ibfk_2_2</span><span class="o">`</span> <span class="k">FOREIGN</span> <span class="k">KEY</span> <span class="p">(</span><span class="o">`</span><span class="n">cid</span><span class="o">`</span><span class="p">)</span> <span class="k">REFERENCES</span> <span class="o">`</span><span class="n">comp_copy</span><span class="o">`</span> <span class="p">(</span><span class="o">`</span><span class="n">id</span><span class="o">`</span><span class="p">)</span>
+<span class="p">)</span> <span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span> <span class="k">DEFAULT</span> <span class="n">CHARSET</span><span class="o">=</span><span class="n">utf8mb4</span> <span class="k">COLLATE</span><span class="o">=</span><span class="n">utf8mb4_0900_ai_ci</span><span class="p">;</span>
+
+<span class="k">INSERT</span>  <span class="k">INTO</span>  <span class="n">emp_copy</span>  <span class="k">SELECT</span>   <span class="o">*</span>  <span class="k">FROM</span>  <span class="n">emp</span> <span class="p">;</span>
+<span class="k">INSERT</span>  <span class="k">INTO</span>  <span class="n">comp_copy</span>  <span class="k">SELECT</span>   <span class="o">*</span>  <span class="k">FROM</span>  <span class="n">comp</span> <span class="p">;</span>
+<span class="k">INSERT</span>  <span class="k">INTO</span>  <span class="n">works_copy</span>  <span class="k">SELECT</span>   <span class="o">*</span>  <span class="k">FROM</span>  <span class="n">works</span> <span class="p">;</span>
+</code></pre></div>
+<hr />
+<p><strong>Q2</strong></p>
+<blockquote>
+<p><strong>年龄&gt;50的男职工的工号和姓名</strong></p>
+<p><strong>输出: 工号， 姓名</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">employment</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">id</span><span class="p">,</span> <span class="n">ename</span> <span class="k">from</span> <span class="n">emp</span> <span class="k">where</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">50</span> <span class="k">and</span> <span class="n">sex</span><span class="o">=</span><span class="s1">&#39;M&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>count=8</strong></p>
+<hr />
+<p><strong>Q3</strong></p>
+<p>（修改过）</p>
+<blockquote>
+<p><strong>查找在一个任意一个公司工资超过1000元的职工</strong></p>
+<p><strong>输出: 工号， 姓名</strong></p>
+<p><strong>去重</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">employment</span><span class="p">;</span>
+<span class="k">select</span> <span class="k">distinct</span> <span class="n">emp</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ename</span> <span class="k">from</span> <span class="n">works</span><span class="p">,</span> <span class="n">emp</span>
+    <span class="k">where</span> <span class="n">salary</span> <span class="o">&gt;</span> <span class="mi">1000</span> <span class="k">and</span> <span class="n">eid</span><span class="o">=</span><span class="n">emp</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>count=240</strong></p>
+<hr />
+<p><strong>Q4</strong></p>
+<blockquote>
+<p><strong>至少在<code>C4</code>和<code>C8</code> 公司兼职的职工</strong></p>
+<p><strong>输出: 工号， 姓名</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">employment</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">emp</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">emp</span><span class="p">.</span><span class="n">ename</span> <span class="k">from</span> <span class="n">emp</span><span class="p">,</span> <span class="n">works</span> <span class="n">w1</span><span class="p">,</span> <span class="n">works</span> <span class="n">w2</span> 
+    <span class="k">where</span> <span class="n">w1</span><span class="p">.</span><span class="n">cid</span><span class="o">=</span><span class="s1">&#39;C4&#39;</span> <span class="k">and</span> <span class="n">w2</span><span class="p">.</span><span class="n">cid</span><span class="o">=</span><span class="s1">&#39;C8&#39;</span> <span class="k">and</span> <span class="n">w1</span><span class="p">.</span><span class="n">eid</span><span class="o">=</span><span class="n">w2</span><span class="p">.</span><span class="n">eid</span> <span class="k">and</span> <span class="n">w1</span><span class="p">.</span><span class="n">eid</span> <span class="o">=</span> <span class="n">emp</span><span class="p">.</span><span class="n">id</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>count=59</strong></p>
+<hr />
+<p><strong>Q5</strong></p>
+<blockquote>
+<p><strong>在<code>Facebook</code> 工作，工资超过1000元的男性职工</strong></p>
+<p><strong>输出: 工号，姓名</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">employment</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">emp</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">emp</span><span class="p">.</span><span class="n">ename</span> <span class="k">from</span> <span class="n">comp</span><span class="p">,</span> <span class="n">emp</span><span class="p">,</span> <span class="n">works</span>
+    <span class="k">where</span> <span class="n">emp</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">works</span><span class="p">.</span><span class="n">eid</span> <span class="k">and</span> <span class="n">emp</span><span class="p">.</span><span class="n">sex</span><span class="o">=</span><span class="s1">&#39;M&#39;</span> <span class="k">and</span> <span class="n">comp</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">works</span><span class="p">.</span><span class="n">cid</span> <span class="k">and</span> <span class="n">comp</span><span class="p">.</span><span class="n">cname</span><span class="o">=</span><span class="s1">&#39;Facebook&#39;</span> <span class="k">and</span> <span class="n">works</span><span class="p">.</span><span class="n">salary</span><span class="o">&gt;</span><span class="mi">1000</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>count=36</strong></p>
+<hr />
+<p><strong>Q6</strong></p>
+<blockquote>
+<p><strong>每个职工兼职的公司数目和工资总数</strong></p>
+<p><strong>输出: 工号，NUM, SUM_SALARY</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">employment</span><span class="p">;</span>
+<span class="k">select</span> <span class="n">eid</span><span class="p">,</span> <span class="k">count</span><span class="p">(</span><span class="n">cid</span><span class="p">),</span> <span class="k">sum</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">from</span> <span class="n">works</span> <span class="k">group</span> <span class="k">by</span> <span class="n">eid</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>s1, 5, 5077</strong></p>
+<hr />
+<p><strong>Q7</strong></p>
+<blockquote>
+<p><strong>查找职工，该职工在<code>S6</code>所在的全部公司都有兼职</strong></p>
+<p><strong>输出: 工号</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">employment</span><span class="p">;</span>
+<span class="k">select</span> <span class="k">distinct</span> <span class="n">w1</span><span class="p">.</span><span class="n">eid</span> <span class="k">from</span> <span class="n">works</span> <span class="n">w1</span> 
+    <span class="k">where</span> <span class="k">not</span> <span class="k">exists</span> <span class="p">(</span> <span class="cm">/*不存在这样的公司*/</span>
+        <span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">works</span> <span class="n">w2</span>
+            <span class="k">where</span> <span class="n">w2</span><span class="p">.</span><span class="n">eid</span><span class="o">=</span><span class="s1">&#39;S6&#39;</span> <span class="k">and</span> <span class="n">w2</span><span class="p">.</span><span class="n">cid</span> <span class="k">not</span> <span class="k">in</span> <span class="p">(</span> <span class="cm">/* S6在该公司，但是w1.eid不在*/</span>
+                <span class="k">select</span> <span class="n">w3</span><span class="p">.</span><span class="n">cid</span> <span class="k">from</span> <span class="n">works</span> <span class="n">w3</span> <span class="k">where</span> <span class="n">w3</span><span class="p">.</span><span class="n">eid</span> <span class="o">=</span> <span class="n">w1</span><span class="p">.</span><span class="n">eid</span>
+            <span class="p">)</span>
+    <span class="p">)</span>
+</code></pre></div>
+<p><strong>count=5</strong></p>
+<hr />
+<p><strong>Q8</strong></p>
+<blockquote>
+<p><strong>在<code>Tencent</code> 中搜索低于本公司平均工资的员工</strong></p>
+<p><strong>输出: 工号，姓名, 工资</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="k">select</span> <span class="n">emp</span><span class="p">.</span><span class="n">id</span><span class="p">,</span> <span class="n">ename</span><span class="p">,</span> <span class="n">salary</span> <span class="k">from</span> <span class="n">emp</span><span class="p">,</span> <span class="n">works</span><span class="p">,</span> <span class="n">comp</span>
+    <span class="k">where</span> <span class="n">comp</span><span class="p">.</span><span class="n">cname</span><span class="o">=</span><span class="s1">&#39;Tencent&#39;</span> <span class="k">and</span> <span class="n">comp</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">works</span><span class="p">.</span><span class="n">cid</span> <span class="k">and</span> <span class="n">emp</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">works</span><span class="p">.</span><span class="n">eid</span>
+    <span class="k">and</span> <span class="n">salary</span> <span class="o">&lt;</span> <span class="p">(</span>
+        <span class="k">select</span> <span class="k">avg</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span> <span class="k">from</span> <span class="n">works</span> <span class="k">as</span> <span class="n">w</span><span class="p">,</span> <span class="n">comp</span> <span class="k">as</span> <span class="k">c</span>
+            <span class="k">where</span> <span class="k">c</span><span class="p">.</span><span class="n">cname</span><span class="o">=</span><span class="s1">&#39;Tencent&#39;</span> <span class="k">and</span> <span class="k">c</span><span class="p">.</span><span class="n">id</span><span class="o">=</span><span class="n">w</span><span class="p">.</span><span class="n">cid</span> 
+    <span class="p">)</span>
+</code></pre></div>
+<p><strong>count=59</strong></p>
+<hr />
+<p><strong>Q9</strong></p>
+<blockquote>
+<p><strong>在Q1创建的副本中，为每一个公司的50岁以上的员工加薪100元</strong></p>
+<p><strong>若职工为多个公司工作，可重复加</strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">employment</span><span class="p">;</span>
+<span class="k">update</span> <span class="n">works_copy</span> <span class="k">set</span> <span class="n">salary</span><span class="o">=</span><span class="n">salary</span><span class="o">+</span><span class="mi">100</span> 
+<span class="k">where</span> <span class="n">eid</span> <span class="k">in</span> <span class="p">(</span><span class="k">select</span> <span class="n">id</span> <span class="k">from</span> <span class="n">emp</span> <span class="k">where</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<p><strong>Q10</strong></p>
+<blockquote>
+<p><strong>在Q1创建的副本中，删除<code>emp_copy</code>和<code>works_copy</code> 中年龄&gt;60的有关元组 </strong></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="n">use</span> <span class="n">employment</span><span class="p">;</span>
+<span class="k">delete</span> <span class="k">from</span> <span class="n">works_copy</span> <span class="k">where</span> <span class="n">eid</span> <span class="k">in</span> <span class="p">(</span><span class="k">select</span> <span class="n">id</span> <span class="k">from</span> <span class="n">emp</span> <span class="k">where</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">60</span><span class="p">);</span>
+<span class="k">delete</span> <span class="k">from</span> <span class="n">emp_copy</span> <span class="k">where</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">60</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../assignment-2/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Assignment-2 Answer
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
+      
+    
+  </body>
+</html>
